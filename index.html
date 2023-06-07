@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Actividad JavaScript</title>        
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width">
+        
+        <!-- Links CSS Boostrap de respaldo -->
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+
+        <!-- CSS Boostrap -->
+        <link rel="stylesheet" href="./css/bootstrap.css">
+
+    </head>
+
+    <body class="d-flex flex-column min-vh-100">   
+        
+        <!-- JS Boostrap -->
+        <script src="./js/bootstrap.bundle.js"></script>
+
+        <!-- Barra -->
+        <nav class="navbar navbar-expand-lg navbar-dark p-2" style="background-color: #353e40;">
+            <a class="navbar-brand pl-3" href="#">Conf Bs As</a>
+            <button class="navbar-toggler" type="button" dat-toggle="collapse" data-target="collapseNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">La conferencia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Los oradores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Conviertete en orador</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: #1abb3d;" href="#">Comprar tickets</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <br>
+        <br>
+
+        <!-- Cartas de descuentos -->
+
+        <div class="container">
+            <div class="card-deck card-flex">
+                <div class="card border-primary">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"> Estudiante</h5>
+                        <p class="card-text">Tiene un descuento</p>
+                        <p><b>80%</b></p>
+                        <p class="card-text"><small class="text-muted">*presentar documentación</small></p>
+                    </div>
+                </div>
+                <div class="card border-info">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Trainee</h5>
+                        <p class="card-text">Tiene un descuento</p>
+                        <p><b>50%</b></p>
+                        <p class="card-text"><small class="text-muted">*presentar documentación</small></p>
+                    </div>
+                </div>
+                <div class="card border-warning">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Junior</h5>
+                        <p class="card-text">Tiene un descuento</p>
+                        <p><b>15%</b></p>
+                        <p class="card-text"><small class="text-muted">*presentar documentación</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>  
+
+        
+        <div>
+            <p class="text-center">VENTA<h1 class="text-center">VALOR DE TICKET $200</h2></p>                      
+        </div>
+        
+        
+        <br>
+        <br>
+        
+        <!-- Formulario para compra de ticket -->
+
+        <div class="container">
+            <form>
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Nombre">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Apellido">
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col">
+                    <input type="text" class="form-control" placeholder="Correo">
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col">
+                        <label for="inputenCantidad">Cantidad</label>
+                        <input type="number" class="form-control" id="inputCantidad" placeholder="Cantidad">
+                    </div>
+                    <div class="col">
+                        <label for="inputenCantidad">Categoria</label>
+                        <select id="inputCategoria" class="form-control">
+                            <option value="80">Estudiante</option>
+                            <option value="50">Trainee</option>
+                            <option value="15" selected>Junior</option>
+                        </select>        
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" id="compraTotal" class="alert alert-primary" style="width: 100%;" value="Total a pagar: $" role="alert" readonly>
+                    </div>
+                </div>
+                <br>
+                <div class="form-row">
+                    <div class="col">
+                        <button type="reset" class="btn btn-success btn-block" style="background-color: #29a744;">Borrar</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-success btn-block" onclick="resumen()" style="background-color: #29a744;">Resumen</button>
+                    </div>
+                </div>
+                <br>
+            </form>
+        </div>        
+    </body>
+    
+    
+    <br>
+    <br>
+    
+    <!-- Pie de pagina -->
+
+    <footer>     
+        <div>
+            <ul class="nav justify-content-center p-3" style="background: linear-gradient(to right, #1a323f, #1c4d69);">
+                <li class="nav-item my-auto px-0 px-xl-4">
+                    <a class="nav-link" href="#" style="color:whitesmoke;"> Preguntas<br>frecuentes </a>
+                </li>
+                <li class="nav-item my-auto px-0 px-xl-4">
+                    <a class="nav-link" href="#" style="color:whitesmoke;"> Contactanos </a>
+                </li>
+                <li class="nav-item my-auto px-0 px-xl-4">
+                    <a class="nav-link" href="#" style="color:whitesmoke;"> Prensa </a>
+                </li>
+                <li class="nav-item my-auto px-0 px-xl-4">
+                    <a class="nav-link" href="#" style="color:whitesmoke;"> Conferencia </a>
+                </li>
+                <li class="nav-item my-auto px-0 px-xl-4">
+                    <a class="nav-link" href="#" style="color:whitesmoke;"> Terminos y<br>condiciones </a>
+                </li>
+                <li class="nav-item my-auto px-0 px-xl-4">
+                    <a class="nav-link" href="#" style="color:whitesmoke;"> Privacidad </a>
+                </li>
+                <li class="nav-item my-auto px-0 px-xl-4">
+                    <a class="nav-link" href="#" style="color:whitesmoke;"> Estudiantes </a>
+                </li>
+            </ul>
+        </div>      
+    </footer>
+
+    <!-- Funcion para calcular el descuento -->
+
+    <script>
+        function resumen(){
+            
+            var precioTicket = 200;
+            var cantidadTicket = document.getElementById('inputCantidad').value;
+            var descuento = document.getElementById('inputCategoria').value;
+
+            var precio = cantidadTicket * (precioTicket - ((precioTicket * descuento) / 100));
+
+            document.getElementById('compraTotal').value = 'Total a pagar: $' + precio;
+        }
+    </script>
+                
+</html>
